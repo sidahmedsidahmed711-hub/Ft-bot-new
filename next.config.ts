@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
  * 🗑️ اللوحة القديمة (داخل البوت) تحيّدت نهائياً: كل الإدارة من لوحة ft-panel.
  * كل مسار قديم يتحوّل إلى اللوحة الجديدة بدل صفحة 404 أو لوحة مكرّرة.
  */
-const PANEL_URL = (process.env.PANEL_URL || "").replace(/\/+$/, "");
+const PANEL_URL = (process.env.PANEL_URL || "/").replace(/\/+$/, "") || "/";
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ["pg"],
